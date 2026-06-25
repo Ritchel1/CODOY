@@ -18,7 +18,7 @@ setTimeout(type,100);
 
 type();
 
-const startDate = new Date("2025-01-01");
+const startDate = new Date("2025-08-21");
 
 function updateCounter(){
 
