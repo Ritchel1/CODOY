@@ -1,86 +1,153 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
-    color:#fff;
-    text-align:center;
-    overflow-x:hidden;
+background:#fb62be;
+overflow-x:hidden;
 }
 
-header{
-    padding:80px 20px;
+.hero{
+height:100vh;
+
+background:url("images/walk.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:relative;
 }
 
-header h1{
-    font-size:3rem;
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
 }
 
-.section{
-    padding:50px 20px;
+.hero-content{
+position:relative;
+z-index:2;
+text-align:center;
+color:rgb(24, 23, 23);
 }
 
-ul{
-    list-style:none;
+.hero-content h1{
+font-size:4rem;
+margin-bottom:20px;
 }
 
-ul li{
-    margin:10px;
-    font-size:1.1rem;
+.hero-content p{
+font-size:1.2rem;
+margin-bottom:20px;
 }
 
-.timeline{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+.btn{
+background:#ff4d88;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+color:white;
 }
 
-.card{
-    background:rgba(255,255,255,0.2);
-    backdrop-filter:blur(10px);
-    padding:20px;
-    border-radius:15px;
-    width:250px;
+section{
+padding:80px 10%;
 }
 
-button{
-    padding:15px 30px;
-    border:none;
-    border-radius:30px;
-    background:#ff4d6d;
-    color:white;
-    font-size:1rem;
-    cursor:pointer;
+h2{
+text-align:center;
+margin-bottom:40px;
 }
 
-button:hover{
-    transform:scale(1.05);
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-#message{
-    margin-top:20px;
-    font-size:1.3rem;
-    font-weight:bold;
+.gallery img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:20px;
+transition:.5s;
+cursor:pointer;
 }
 
-footer{
-    padding:30px;
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.counter-section{
+text-align:center;
+}
+
+#counter{
+font-size:2rem;
+font-weight:bold;
+color:#ff4d88;
+}
+
+.letter{
+text-align:center;
+}
+
+#openLetter{
+padding:15px 30px;
+border:none;
+background:#ff4d88;
+color:white;
+border-radius:30px;
+cursor:pointer;
+}
+
+#letterBox{
+max-width:700px;
+margin:30px auto;
+background:rgb(240, 166, 207);
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,.1);
+display:none;
+white-space:pre-line;
+}
+
+.final{
+text-align:center;
+}
+
+#loveBtn{
+padding:20px 40px;
+font-size:1.2rem;
+border:none;
+background:#ff4d88;
+color:white;
+border-radius:50px;
+cursor:pointer;
 }
 
 .heart{
-    position:fixed;
-    color:red;
-    animation:fall linear forwards;
-    top:-20px;
+position:fixed;
+top:-20px;
+font-size:20px;
+animation:fall linear forwards;
 }
 
 @keyframes fall{
-    to{
-        transform:translateY(110vh);
-    }
+
+to{
+transform:translateY(110vh);
+}
+
 }
